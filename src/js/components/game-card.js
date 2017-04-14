@@ -15,20 +15,24 @@ class GameCard extends Component {
     }
 
     return (
-      <Container className="text-center">
-        <h1> {this.game.name} </h1>
-        <Row>
-          <Col xs="6"> <img className="img-fluid" src={this.game.imageUrl} alt={this.game.name}/> </Col>
-          <Col xs="6"> <p> {this.game.description}  </p> </Col>
+      <Container className="game-card">
+        <Row className="game-img">
+          <img src={this.game.imageUrl} alt={this.game.name}/>
         </Row>
-        <Row>
-          {
-            stars.map((value) => {
-              return <Col xs={{size: 2, push: 1}} key={value}>
-                {value}
-              </Col>
-            })
-          }
+        <Row className="game-name">
+          <Col>
+            <h1> {this.game.name} </h1>
+          </Col>
+        </Row>
+        <Row className="game-rate">
+          <Col>
+            {
+              stars.map((value) => <i key={value} className="rate-star fa fa-star fa-2x"/>)
+            }
+          </Col>
+        </Row>
+        <Row className="game-description">
+          <Col> <p> {this.game.description}  </p> </Col>
         </Row>
       </Container>
     )
