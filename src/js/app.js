@@ -35,7 +35,8 @@ let games = [{
 class App extends Component {
   render() {
     return (
-      <Row>
+      <Col lg="9">
+      <Row className="game-card-list">
         {
           this.props.games.map((game) => {
             return (
@@ -46,6 +47,7 @@ class App extends Component {
           })
         }
       </Row>
+      </Col>
     )
   }
 }
