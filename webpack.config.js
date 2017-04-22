@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         app: [
-          './src/js/app.js'
+          './src/app.js'
         ]
     },
     output: {
@@ -18,14 +18,10 @@ module.exports = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
               test: /\.scss$/,
               use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
-                use: ['css-loader', 'sass-loader']
+                loader: 'css-loader?modules!sass-loader'
               })
             }
         ]

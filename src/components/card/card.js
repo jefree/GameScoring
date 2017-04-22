@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap';
+import Fa from 'react-fontawesome'
+
+//import styles from './card.scss'
+const styles = require('./card.scss')
 
 class GameCard extends Component {
 
@@ -15,23 +19,23 @@ class GameCard extends Component {
     }
 
     return (
-      <Container className="game-card">
-        <Row className="game-img">
+      <Container className={styles.card}>
+        <Row className={styles.gameImg}>
           <img src={this.game.imageUrl} alt={this.game.name}/>
         </Row>
-        <Row className="game-name">
+        <Row className={styles.gameName}>
           <Col>
             <h1> {this.game.name} </h1>
           </Col>
         </Row>
-        <Row className="game-rate">
+        <Row className={styles.gameRate}>
           <Col>
             {
-              stars.map((value) => <i key={value} className="rate-star fa fa-star fa-2x"/>)
+              stars.map((value) => <Fa key={value} name="star" size="2x" className={styles.rateStar} />)
             }
           </Col>
         </Row>
-        <Row className="game-description">
+        <Row className={styles.gameDescription}>
           <Col> <p> {this.game.description}  </p> </Col>
         </Row>
       </Container>

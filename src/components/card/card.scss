@@ -1,0 +1,37 @@
+.card {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #172031;
+  color: #FFCE56;
+  cursor: pointer;
+  max-width: 350px;
+  width: auto;
+}
+
+.gameImg {
+  margin-bottom: 10px;
+  img {
+    border-radius: 10px 10px 0px 0px;
+    max-height: 250;
+    width: 100%;
+  }
+}
+
+.gameName {
+  h1 {
+    margin: 0px;
+  }
+}
+
+.gameRate {
+  margin-bottom: 5px;
+}
+
+.rateStar {
+  margin: 0px 2px;
+  color: #616A79;
+}
+
+.gameDescription {
+  color: #F3EFE3;
+}

@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap';
 import ReactDOM from 'react-dom'
 
-import GameCard from './components/game-card'
-
-import '../css/app.scss'
+import GameCard from './components/card/card'
 
 let games = [{
   id: 1,
@@ -40,7 +38,7 @@ class App extends Component {
         {
           this.props.games.map((game) => {
             return (
-              <Col key={game.id} xs="12" sm="6" md="4" lg="3">
+              <Col key={game.id} xs="12" sm="6" md="4">
                 <GameCard game={game} />
               </Col>
             )
